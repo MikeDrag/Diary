@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}PraXis My Homepages{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<style>
+	body {
+		background: whitesmoke;
+	}
+</style>
+
+<div class="container" id="categoryContainer">
+	<aside>
+		<h1>Categories</h1>
+		<ul>
+			<li><a href="?cat=news">News</a></li>
+			<li><a href="cat=health">Health</a></li>
+			<li><a href="cat=politics">Politics</a></li>
+			<li><a href="cat=food">Food</a></li>
+			<li><a href="cat=other">Other</a></li>
+		</ul>
+	</aside>
+</div>
+
+{% endblock %}

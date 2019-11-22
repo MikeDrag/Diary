@@ -1,0 +1,48 @@
+        @import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+        @import url('https://fonts.googleapis.com/css?family=Anton|Exo|Ibarra+Real+Nova&display=swap');
+        
+        #loginPop {
+            display: block;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            font-weight: 700;
+        }
+
+        input {
+            display: block;
+            border-radius: 5%;
+            margin: 0 auto;
+        }
+
+        .modal-header {
+            background: darkred;
+            color: white;
+        }
+
+        .modal-footer {
+            background: darkred;
+        }
+
+        .modal-dialog {
+            margin-top: 5em;
+        }
+
+        #quoteContainer {
+            color: white;
+            position: fixed;
+            top: 80%;
+            left: 50%;
+            width: 30em;
+            height: 18em;
+            margin-top: -9em;
+            /*set to a negative number 1/2 of your height*/
+            margin-left: -15em;
+            /*set to a negative number 1/2 of your width*/
+        }
+
+        #quoteContent {
+            letter-spacing: 3px;
+        }

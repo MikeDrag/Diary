@@ -2,5 +2,31 @@
 
 
 {% block body %}
-	{% include '@Calendar/calendar.html' %}
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap');
+        body {
+            background: #5eb5e0;
+        }
+
+    </style>
+    <div class="container-fluid" id="calendar-main-wrapper">
+        <div id="calendar-wrapper">
+            <h2 id='intro-heading'>
+                <p class="text-center">Month: {{ "now"|date('M') }}</p>
+                <p id='intro-header'>Date: {{ "now"|date('m/d/Y') }}</p>
+                <p style="color: black;text-align:center;">Day: {{ "now"|date('l') }} </p>
+
+            </h2>
+            <table>
+                <thead>
+                {%  for day in days %}
+                    <th>{{ day|upper }}</th>
+                {% endfor %}
+                </thead>
+                    <tbody>
+                    {{ diary | raw }}
+                    </tbody>
+            </table>
+        </div>
+    </div>
 {% endblock %}

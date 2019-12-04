@@ -51,7 +51,11 @@
 		border-bottom: 5px darkred solid;
 		border-radius: 20px; */
 		padding: 1.4em;
-	}
+        font-family: 'Libre Baskerville', serif;
+        border-top: 10px black solid;
+        border-right: 10px black solid;
+        border-left: 10px black solid;
+    }
 
 	#note-added-message {
 		display: none;
@@ -61,3 +65,11 @@
 		text-decoration: none;
 		color: black;
 	}
+
+    th {
+        font-size: 2em;
+        text-align: center;
+    }
+    td {
+        font-size: 2em;
+    }

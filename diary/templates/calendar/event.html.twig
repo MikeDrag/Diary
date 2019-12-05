@@ -2,11 +2,61 @@
 
 {% block body %}
 <div class="container">
+
+ <div class=""
+
+
     <div id="event-wrapper">
-        {{ form_start(form) }}
-        {{ form_widget(form) }}
-        {{ form_end(form) }}
+{#        {{ form_start(form) }}#}
+{#        {{ form_widget(form) }}#}
+{#        {{ form_end(form) }}#}
     </div>
 </div>
+    <div class="container">
+        <header>
+            <form action="javascript:void(0);">
+                <input type="text" id="bar-search" class="bar-search" placeholder="Search...">
+            </form>
+
+            <div id="categories-list" class="categories">
+
+               <a class="active" data-category="all">
+                    All
+                </a>
+                <a id="all-category" data-category="health">
+                    Health
+                </a>
+
+                <a id="all-category" data-category="news">
+                    News
+                </a>
+
+                <a id="all-category" data-category="politics">
+                    Politics
+                </a>
+
+                <a id="all-category" data-category="other">
+                    Other
+                </a>
+            </div>
+        </header>
+
+        <section id="category-items-container" class="d-flex flex-row bd-highlight mb-3">
+            <div class="item"></div>
+        </section>
+
+        <section id="overlay" class="overlay">
+            <div class="container-popup">
+                <button type="button" id="close-popup">
+                    <i class="fa fa-times"></i>
+                </button>
+
+                <img src="" alt="" title="">
+            </div>
+
+            <p class="description"></p>
+        </section>
+
+    </div>
 
 {% endblock %}

@@ -8,6 +8,7 @@ use App\Entity\Event;
 use App\Form\EventType;
 use Symfony\Contracts\Translation\TranslatorInterface;
 use Symfony\Component\HttpFoundation\Request;
+use App\Entity\Category;
 
 
 
@@ -59,7 +60,7 @@ class CalendarController extends AbstractController
             } else {
                 $count_days++;
                 if ($day_of_the_month == $count_days) {
-                    $diary .= '<td data-id="' . $count_days . '"style="background:brown;">' . '<a href="d=' . $count_days . '&m=' . date('m') . '"/>' . $count_days . '</a></td>';
+                    $diary .= '<td data-id="' . $count_days . '"style="background:brown;">' . '<a href="event/d=' . $count_days . '&m=' . date('m') . '"/>' . $count_days . '</a></td>';
                 } else {
                     $diary .= '<td data-toggle="modal" data-target="#myModal" data-id="' . $count_days . '">' . '<a href="event/d=' . $count_days . '&m=' . date('m') . '"/>' . $count_days . '</a></td>';
                 }
@@ -93,8 +94,10 @@ class CalendarController extends AbstractController
     public function event_day(Request $request, TranslatorInterface $translator) {
     	// Translation
 //	    $translated = $translator->trans('Symfony is great');
+	    $category = new Category();
+	    $categories = $this->getDoctrine()->getRepository(Category::class)->findAll();
     	$event = new Event();
     	$form = $this->createForm(EventType::class, $event);
-	    return $this->render('calendar/event.html.twig', ['form' => $form->createView()]);
+	    return $this->render('calendar/event.html.twig', ['categories' => $categories, 'form' => $form->createView()]);
     }
 }

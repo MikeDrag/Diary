@@ -77,8 +77,8 @@ a {
 }
 
 item-content,img {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
 }
 .item-content, h3 {
     position: relative;

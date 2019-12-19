@@ -10,10 +10,6 @@ use Symfony\Contracts\Translation\TranslatorInterface;
 use Symfony\Component\HttpFoundation\Request;
 use App\Entity\Category;
 
-
-
-
-
 class CalendarController extends AbstractController
 {
     /**

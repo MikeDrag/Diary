@@ -8,13 +8,10 @@ $(document).ready(function() {
             method: 'post',
             dataType: 'json',
             success: function (data) {
-                console.log(data);
                 $.each(data, function (k, v) {
-                    console.log(data[k]);
-                        $('#category-items-container .item').append('<div class="item">' +
-                            '<h3>' + data.name + '</h3>' +
-                            '<p>' + '<img src="' + data.imageUrl + '"/>' + '</p>' +
-
+                        $('#category-items-container').append('<div class="item">' +
+                            '<h3><a href="' + '/category/id?name=' + v.name + '"' + ">" + v.name + '</a></h3>' +
+                            '<p>' + '<img src="' + v.imageUrl + '"/>' + '</p>' +
                             '</div>');
                 });
             },

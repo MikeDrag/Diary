@@ -3,15 +3,7 @@
 {% block body %}
 <div class="container">
 
- <div class=""
-
-
-    <div id="event-wrapper">
-{#        {{ form_start(form) }}#}
-{#        {{ form_widget(form) }}#}
-{#        {{ form_end(form) }}#}
-    </div>
-</div>
+ <div class="text-center"><a class="btn btn-primary text-white" href="{{ path('create_event') }}">Create a mall</a></div>
     <div class="container">
         <header>
             <form action="javascript:void(0);">
@@ -41,9 +33,7 @@
             </div>
         </header>
 
-        <section id="category-items-container" class="d-flex flex-row bd-highlight mb-3">
-            <div class="item"></div>
-        </section>
+        <section id="category-items-container" class="d-flex"></section>
 
         <section id="overlay" class="overlay">
             <div class="container-popup">

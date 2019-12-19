@@ -31,10 +31,6 @@ class Event
      */
     private $category;
 
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $type;
 
     public function getId(): ?int
     {
@@ -73,18 +69,6 @@ class Event
     public function setCategory(?string $category): self
     {
         $this->category = $category;
-
-        return $this;
-    }
-
-    public function getType(): ?string
-    {
-        return $this->type;
-    }
-
-    public function setType(?string $type): self
-    {
-        $this->type = $type;
 
         return $this;
     }

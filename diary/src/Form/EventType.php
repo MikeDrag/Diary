@@ -3,6 +3,7 @@
 namespace App\Form;
 
 use App\Entity\Event;
+use App\Entity\Category;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -10,6 +11,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+
 
 class EventType extends AbstractType
 {
@@ -18,10 +21,10 @@ class EventType extends AbstractType
         $builder
             ->add('name', TextType::class, ['label_attr' => array('class' => 'event_name'),
 	            'attr' => ['class' => 'form-control']])
-            ->add('description',TextType::class, ['attr' => ['class' => 'form-control']])
-            ->add('category',TextType::class, ['attr' => ['class' => 'form-control']])
-            ->add('type',TextType::class, ['attr' => ['class' => 'form-control']])
-        ;
+            ->add('description', TextType::class, ['attr' => ['class' => 'form-control', 'required' => false]])
+            ->add('category', EntityType::class, ['class' => Category::class, 'choice_label' => 'name', 'attr' => ['class' => 'form form-control']])
+            ->add('submit', SubmitType::class, ['attr' => ['class' => 'btn btn-primary p-2 mt-2']])
+            ;
     }
 
     public function configureOptions(OptionsResolver $resolver)

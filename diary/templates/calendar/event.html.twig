@@ -3,8 +3,8 @@
 {% block body %}
 <div class="container">
 
- <div class="text-center"><a class="btn btn-primary text-white" href="{{ path('create_event') }}">Create a mall</a></div>
-    <div class="container">
+ <div class="text-center"><a class="btn btn-primary text-white" href="{{ path('create_event') }}">Add a note</a></div>
+    {# <div class="container">
         <header>
             <form action="javascript:void(0);">
                 <input type="text" id="bar-search" class="bar-search" placeholder="Search...">
@@ -46,7 +46,19 @@
 
             <p class="description"></p>
         </section>
+    </div> #}
 
+    <div class="container">
+        <input type="text" id="search-event-item" class="form form-control-sm" placeholder="search...">
+            <div class="event-holder"> 
+                <div class="row">
+                    {% for event in events %}
+                        <div class="col-md-3 event-item">
+                            {{ event.name }}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
     </div>
 
 {% endblock %}

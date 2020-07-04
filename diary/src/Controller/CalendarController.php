@@ -91,9 +91,10 @@ class CalendarController extends AbstractController
     	// Translation
 //	    $translated = $translator->trans('Symfony is great');
 	    $category = new Category();
-	    $categories = $this->getDoctrine()->getRepository(Category::class)->findAll();
+		$categories = $this->getDoctrine()->getRepository(Category::class)->findAll();
+		$events = $this->getDoctrine()->getRepository(Event::class)->findAll();
     	$event = new Event();
     	$form = $this->createForm(EventType::class, $event);
-	    return $this->render('calendar/event.html.twig', ['categories' => $categories, 'form' => $form->createView()]);
+	    return $this->render('calendar/event.html.twig', ['categories' => $categories, 'events' => $events]);
     }
 }

@@ -8,10 +8,13 @@
         <link rel="stylesheet" href="/myhomepages.css"/>
         <link rel="stylesheet" href="/calendar.css"/>
         <link rel="stylesheet" href="/event.css"/>
+        <link rel="stylesheet" href="/bootstrap.min.css"/>
+
         <!-- Calendar Styles -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fullcalendar/core@4.1.0/main.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@4.1.0/main.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fullcalendar/timegrid@4.1.0/main.min.css">
+        <link rel="stylesheet" href="/boottstrap.min.css"/>
 
         {% block stylesheets %}{% endblock %}
     </head>
@@ -22,6 +25,9 @@
         {% block body %}
 
         {% endblock %}
+    <div class="container-fluid">
+        <footer class="text-center text-white bg-dark">Created by Mike Tragas &copy;</footer>
+    </div>
     <!-- Block body END -->
         {% block javascripts %}
             <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

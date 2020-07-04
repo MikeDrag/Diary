@@ -9,6 +9,7 @@ $(document).ready(function() {
             dataType: 'json',
             success: function (data) {
                 $.each(data, function (k, v) {
+                    console.log(name);
                         $('#category-items-container').append('<div class="item">' +
                             '<h3><a href="' + '/category/id?name=' + v.name + '"' + ">" + v.name + '</a></h3>' +
                             '<p>' + '<img src="' + v.imageUrl + '"/>' + '</p>' +

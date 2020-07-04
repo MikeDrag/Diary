@@ -1,19 +1,21 @@
-    * {
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap');
+
+* {
     box-sizing: border-box;
-    /*text-align: center;*/
 	}
 
-	ul {
+    body {
+        background: url('https://images.unsplash.com/photo-1495195129352-aeb325a55b65?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1055&q=80');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    ul {
 		list-style-type: none;
 	}
 
 	li {
 		color: mediumslateblue;
-	}
-
-	#intro-heading {
-		color: black;
-		margin: 0;
 	}
 
 	td:hover {
@@ -42,19 +44,15 @@
 		margin: 0 auto;
 	}
 
-	#intro-header {
+	#intro-heading {
 		margin-bottom: 10px;
 		color: black;
 		display: flex;
-		justify-content: center;
-		/* border-top: 5px darkblue solid;
-		border-bottom: 5px darkred solid;
-		border-radius: 20px; */
+		flex-direction: column;
+		justify-content: left;
 		padding: 1.4em;
         font-family: 'Libre Baskerville', serif;
-        border-top: 10px black solid;
-        border-right: 10px black solid;
-        border-left: 10px black solid;
+        font-size: 20px;
     }
 
 	#note-added-message {
@@ -67,9 +65,9 @@
 	}
 
     th {
-        font-size: 2em;
+        font-size: 1.2em;
         text-align: center;
     }
     td {
-        font-size: 2em;
+        font-size: 1.1em;
     }

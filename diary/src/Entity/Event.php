@@ -22,14 +22,20 @@ class Event
     private $name;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $description;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\ManyToOne(targetEntity="App\Entity\Category", inversedBy="event")
+     * @ORM\JoinColumn(name="category_id", referencedColumnName="id")
      */
     private $category;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $date;
 
 
     public function getId(): ?int
@@ -61,14 +67,26 @@ class Event
         return $this;
     }
 
-    public function getCategory(): ?string
+    public function getCategory()
     {
         return $this->category;
     }
 
-    public function setCategory(?string $category): self
+    public function setCategory($category): self
     {
         $this->category = $category;
+
+        return $this;
+    }
+
+    public function getDate(): ?string
+    {
+        return $this->date;
+    }
+
+    public function setDate(?string $date): self
+    {
+        $this->date = $date;
 
         return $this;
     }

@@ -88,3 +88,14 @@ item-content,img {
 a:hover {
     cursor: pointer;
     }
+.event-holder {
+    padding: 1.5em;
+    font-size: 1.2em;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.event-item {
+    border: 1px black solid;
+    padding: 1.3em;
+    height: 8rem;
+}

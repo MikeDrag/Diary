@@ -8,14 +8,15 @@
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
 
-<div class="example-wrapper text-center">
-{% if msg is defined and msg is not null %}
-<div class="notice text-success">
-    lol
-</div>
-{% endif %}
+<div class="text-center">
+    <div class="text-center alert alert-success" role="alert">
+    {% for message in app.flashes('event_added') %}
+        <div class="flash-notice">
+            {{ message }}
+        </div>
+    {% endfor %}
+    </div>
 {{ form(form) }}
 </div>
-
 
 {% endblock %}

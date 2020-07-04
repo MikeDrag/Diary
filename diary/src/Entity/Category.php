@@ -32,6 +32,11 @@ class Category
     private $image_url;
 
     /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Event", mappedBy="category", orphanRemoval=true)
+     */
+    protected $event;
+
+    /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $active;

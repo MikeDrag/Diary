@@ -1,48 +1,85 @@
-        @import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
-        @import url('https://fonts.googleapis.com/css?family=Anton|Exo|Ibarra+Real+Nova&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Anton|Exo|Ibarra+Real+Nova&display=swap');
 
-        #loginPop {
-            display: block;
-            text-align: center;
-        }
+#loginPop {
+    display: block;
+    text-align: center;
+}
 
-        label {
-            display: block;
-            font-weight: 700;
-        }
+label {
+    display: block;
+    font-weight: 700;
+}
 
-        input {
-            display: block;
-            border-radius: 5%;
-            margin: 0 auto;
-        }
+input {
+    display: block;
+    border-radius: 5%;
+    margin: 0 auto;
+}
 
-        .modal-header {
-            background: darkred;
-            color: white;
-        }
+.modal-header {
+    background: darkred;
+    color: white;
+}
 
-        .modal-footer {
-            background: darkred;
-        }
+.modal-footer {
+    background: darkred;
+}
 
-        .modal-dialog {
-            margin-top: 5em;
-        }
+.modal-dialog {
+    margin-top: 5em;
+}
 
-        #quoteContainer {
-            color: white;
-            position: fixed;
-            top: 80%;
-            left: 50%;
-            width: 30em;
-            height: 18em;
-            margin-top: -9em;
-            /*set to a negative number 1/2 of your height*/
-            margin-left: -15em;
-            /*set to a negative number 1/2 of your width*/
-        }
+#quoteContainer {
+    color: white;
+    position: fixed;
+    top: 80%;
+    left: 50%;
+    width: 30em;
+    height: 18em;
+    margin-top: -9em;
+    /*set to a negative number 1/2 of your height*/
+    margin-left: -15em;
+    /*set to a negative number 1/2 of your width*/
+}
 
-        #quoteContent {
-            letter-spacing: 3px;
-        }
+#quoteContent {
+    letter-spacing: 3px;
+}
+
+.alert-success {
+    animation: fadein 3s;
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
